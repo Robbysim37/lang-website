@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+html, 
+body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+$custom-primary-green: (
+    50 : #ebf2ea,
+    100 : #cedecb,
+    200 : #adc8a9,
+    300 : #8cb186,
+    400 : #74a16c,
+    500 : #5b9052,
+    600 : #53884b,
+    700 : #497d41,
+    800 : #407338,
+    900 : #2f6128,
+    A100 : #b1ffa7,
+    A200 : #84ff74,
+    A400 : #56ff41,
+    A700 : #3fff28,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-accent-green: (
+    50 : #e6ede4,
+    100 : #bfd1bc,
+    200 : #95b390,
+    300 : #6b9564,
+    400 : #4b7e42,
+    500 : #2b6721,
+    600 : #265f1d,
+    700 : #205418,
+    800 : #1a4a14,
+    900 : #10390b,
+    A100 : #7eff73,
+    A200 : #4fff40,
+    A400 : #20ff0d,
+    A700 : #14f200,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custon-warn-purple: (
+    50 : #f4eef5,
+    100 : #e4d4e6,
+    200 : #d2b7d6,
+    300 : #bf9ac6,
+    400 : #b285b9,
+    500 : #a46fad,
+    600 : #9c67a6,
+    700 : #925c9c,
+    800 : #895293,
+    900 : #784083,
+    A100 : #f8d9ff,
+    A200 : #efa6ff,
+    A400 : #e773ff,
+    A700 : #e259ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-primary: mat.define-palette($custom-primary-green);
+$custom-accent: mat.define-palette($custom-accent-green);
+$custom-warn: mat.define-palette($custon-warn-purple);
+
+$custom-theme: mat.define-light-theme(
+    (
+        color: (
+            primary:$custom-primary,
+            accent:$custom-accent,
+            warn:$custom-warn,
+        ),
+    )
+);
+
+@include mat.all-component-themes($custom-theme)
