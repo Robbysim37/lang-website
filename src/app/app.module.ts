@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material/material.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { VideosComponent } from './videos/videos.component';
+import { VideoGridCardComponent } from './videos/video-grid-card/video-grid-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    VideosComponent,
+    VideoGridCardComponent
   ],
   imports: [
     BrowserModule,
