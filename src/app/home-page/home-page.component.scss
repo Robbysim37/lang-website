@@ -1,0 +1,26 @@
+@import '../../styles.scss';
+
+.navCard{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get($custom-primary-palette, 500);
+    flex-grow: 1;
+    &:hover {
+        cursor: pointer;
+      }
+
+}
+
+.highlight{
+    &:hover {
+        background-color: map-get($custom-accent-palette, 500);
+        cursor: pointer;
+      }
+}
+
+.navbar{
+    display: flex;
+}
+

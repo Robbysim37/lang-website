@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+html, 
+body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::-webkit-scrollbar {
+    width: 0px; /* Width of the scrollbar */
+  }
+
+
+$custom-primary-palette: (
+    50 : #e8ebee,
+    100 : #c5ced4,
+    200 : #9eadb7,
+    300 : #778c9a,
+    400 : #597485,
+    500 : #3c5b6f,
+    600 : #365367,
+    700 : #2e495c,
+    800 : #274052,
+    900 : #1a2f40,
+    A100 : #81c4ff,
+    A200 : #4eacff,
+    A400 : #1b94ff,
+    A700 : #0288ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$custom-accent-palette: (
+    50 : #e3e7e9,
+    100 : #b9c2c8,
+    200 : #8a9aa4,
+    300 : #5b717f,
+    400 : #385263,
+    500 : #153448,
+    600 : #122f41,
+    700 : #0f2738,
+    800 : #0c2130,
+    900 : #061521,
+    A100 : #5eaaff,
+    A200 : #2b8fff,
+    A400 : #0074f7,
+    A700 : #0068de,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$custon-warn-palette: (
+    50 : #fbe5e5,
+    100 : #f4bdbd,
+    200 : #ed9191,
+    300 : #e66565,
+    400 : #e04444,
+    500 : #db2323,
+    600 : #d71f1f,
+    700 : #d21a1a,
+    800 : #cd1515,
+    900 : #c40c0c,
+    A100 : #fff0f0,
+    A200 : #ffbdbd,
+    A400 : #ff8a8a,
+    A700 : #ff7070,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-primary: mat.define-palette($custom-primary-palette);
+$custom-accent: mat.define-palette($custom-accent-palette);
+$custom-warn: mat.define-palette($custon-warn-palette);
+
+$custom-theme: mat.define-light-theme(
+    (
+        color: (
+            primary:$custom-primary,
+            accent:$custom-accent,
+            warn:$custom-warn,
+        ),
+    )
+);
+
+@include mat.all-component-themes($custom-theme)
