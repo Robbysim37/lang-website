@@ -1,0 +1,8 @@
+@import '../../styles.scss';
+
+.video-flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: map-get($custom-primary-palette, 700);
+}
