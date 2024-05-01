@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="navbar">
+<mat-toolbar color="primary" class="navbar mat-toolbar">
     <div class="navCard highlight">Videos</div>
     <div class="navCard highlight">Photos</div>
 <div class="navCard">Lang Documented</div>
@@ -6,4 +6,8 @@
     <div class="navCard highlight">Contact</div>
 </mat-toolbar>
 
-<app-videos></app-videos>
+<!-- Fake Toolbar that will push main content down so that the real
+toolbar never covers anything -->
+<mat-toolbar/>
+
+<app-videos class="content"></app-videos>

@@ -1,0 +1,20 @@
+@import "../../../styles.scss";
+
+.video-card{
+    margin:10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.video-card-content{
+    display: flex;
+    justify-content: space-between;
+    background-color: map-get($custom-primary-palette,500);
+    color: map-get(map-get($custom-primary-palette,contrast),500);
+}
+
+.thumbnail{
+  height:16.8vw;
+  width:30vw;
+}
+
