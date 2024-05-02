@@ -1,4 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+interface videoDetails {
+  description: string
+  file_name: string
+  id: number
+  location: string
+  thumbnail: string
+  title: string
+  year: number
+}
+
+let videoDetailsInitializer = {
+  description: "",
+  file_name: "",
+  id: 0,
+  location: "",
+  thumbnail: "",
+  title: "",
+  year: 0
+}
 
 @Component({
   selector: 'app-video-grid-card',
@@ -7,4 +27,6 @@ import { Component } from '@angular/core';
 })
 export class VideoGridCardComponent {
 
+  constructor() {}
+  @Input() cardData:videoDetails = videoDetailsInitializer
 }
