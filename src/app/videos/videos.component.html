@@ -1,11 +1,3 @@
 <div class="video-flex-container">
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
-    <app-video-grid-card/>
+    <app-video-grid-card *ngFor="let card of videoDetailsArr" [cardData]="card"/>
 </div>

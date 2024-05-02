@@ -8,6 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { VideosComponent } from './videos/videos.component';
 import { VideoGridCardComponent } from './videos/video-grid-card/video-grid-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { VideoGridCardComponent } from './videos/video-grid-card/video-grid-card
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
