@@ -1,0 +1,53 @@
+@import "../../../styles.scss";
+
+.person-card{
+    height: 7vw;
+    width: 30vw;
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: map-get($custom-primary-palette,500);
+    user-select: none;
+}
+
+.avatar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.avatar{
+    height: 5vw;
+    width: 5vw;
+    margin-left: 1em;
+    margin-bottom: 0px;
+}
+
+.text-group{
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.5em;
+    color: map-get(map-get($custom-primary-palette,contrast),500);
+}
+
+.birthdate{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    color: map-get(map-get($custom-primary-palette,contrast),400);
+}

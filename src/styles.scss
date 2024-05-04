@@ -9,7 +9,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 0px; /* Width of the scrollbar */
   }
 
-
 $custom-primary-palette: (
     50 : #e8ebee,
     100 : #c5ced4,
@@ -30,7 +29,7 @@ $custom-primary-palette: (
         100 : #000000,
         200 : #000000,
         300 : #000000,
-        400 : #ffffff,
+        400 : #cbcbcb,
         500 : #ffffff,
         600 : #ffffff,
         700 : #ffffff,
@@ -63,7 +62,7 @@ $custom-accent-palette: (
         100 : #000000,
         200 : #000000,
         300 : #ffffff,
-        400 : #ffffff,
+        400 : #cbcbcb,
         500 : #ffffff,
         600 : #ffffff,
         700 : #ffffff,
@@ -96,7 +95,7 @@ $custon-warn-palette: (
         100 : #000000,
         200 : #000000,
         300 : #000000,
-        400 : #ffffff,
+        400 : #cbcbcb,
         500 : #ffffff,
         600 : #ffffff,
         700 : #ffffff,
@@ -122,5 +121,9 @@ $custom-theme: mat.define-light-theme(
         ),
     )
 );
+
+body {
+    background-color: map-get($custom-primary-palette, 700);;
+}
 
 @include mat.all-component-themes($custom-theme)
