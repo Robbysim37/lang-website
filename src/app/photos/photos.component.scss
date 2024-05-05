@@ -1,8 +1,14 @@
 @import "../../styles.scss";
 
-.people-flex-container{
+.photo-flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: map-get($custom-primary-palette, 700);
+}
+
+img{
+    height:16.8vw;
+    width:30vw;
+    margin:1em;
 }
