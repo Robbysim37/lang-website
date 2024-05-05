@@ -1,1 +1,9 @@
-<p>photos works!</p>
+<app-photo-modal *ngIf="isOpen" [imgSrc]="selectedPhotoURL" (closeModal)="handleModalClose($event)"/>
+<div class="photo-flex-container">
+    <img id="1" (click)="displayPhoto($event)" src="https://picsum.photos/200/300"/>
+    <img id="2" (click)="displayPhoto($event)" src="https://picsum.photos/400/300"/>
+    <img id="3" (click)="displayPhoto($event)" src="https://picsum.photos/600"/>
+    <img id="4" (click)="displayPhoto($event)" src="https://picsum.photos/1920/1080"/>
+    <img id="5" (click)="displayPhoto($event)" src="https://picsum.photos/900/600"/>
+    <img id="6" (click)="displayPhoto($event)" src="https://picsum.photos/200/300"/>
+</div>

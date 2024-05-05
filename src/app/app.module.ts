@@ -13,6 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PhotosComponent } from './photos/photos.component';
 import { PeopleComponent } from './people/people.component';
 import { PersonGridCardComponent } from './people/person-grid-card/person-grid-card.component';
+import { PhotoModalComponent } from './photos/photo-modal/photo-modal.component';
 
 const appRoutes:Routes = [
   {path: "videos",component:VideosComponent},
@@ -28,7 +29,8 @@ const appRoutes:Routes = [
     VideoGridCardComponent,
     PhotosComponent,
     PeopleComponent,
-    PersonGridCardComponent
+    PersonGridCardComponent,
+    PhotoModalComponent
   ],
   imports: [
     BrowserModule,
