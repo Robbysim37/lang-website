@@ -14,6 +14,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { PeopleComponent } from './people/people.component';
 import { PersonGridCardComponent } from './people/person-grid-card/person-grid-card.component';
 import { PhotoModalComponent } from './photos/photo-modal/photo-modal.component';
+import { FullPageGridComponent } from './main-content/full-page-grid/full-page-grid.component';
 
 const appRoutes:Routes = [
   {path: "videos",component:VideosComponent},
@@ -30,7 +31,8 @@ const appRoutes:Routes = [
     PhotosComponent,
     PeopleComponent,
     PersonGridCardComponent,
-    PhotoModalComponent
+    PhotoModalComponent,
+    FullPageGridComponent
   ],
   imports: [
     BrowserModule,
