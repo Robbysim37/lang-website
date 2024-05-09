@@ -37,7 +37,6 @@ export class VideosService{
         this.http.get<videoObj[]>("http://174.174.187.245:8082/api/Videos")
         .pipe(map(responseData => {
             const videoArr:videoObj[] = []
-            console.log(responseData)
             responseData.forEach(detailObj => {
             videoArr.push(detailObj)
             })

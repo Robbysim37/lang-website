@@ -11,18 +11,16 @@ import { Subscription } from 'rxjs';
 
 export class VideosComponent implements OnInit {
 
-  private videosSubscription: Subscription =new Subscription();
+  private videosSubscription: Subscription = new Subscription();
 
   constructor(private videosService: VideosService){}
 
   videoDetailsArr:videoObj[] = []
 
   ngOnInit(): void {
-    console.log(this.videoDetailsArr)
     this.videosService.getBackendVideos()
     this.videosSubscription = this.videosService.videos$.subscribe(value => {
       this.videoDetailsArr = value;
-      console.log(this.videoDetailsArr)
     });
   }
 

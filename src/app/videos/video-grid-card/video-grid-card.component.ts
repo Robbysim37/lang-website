@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 interface videoDetails {
   description: string
@@ -25,8 +25,14 @@ let videoDetailsInitializer = {
   templateUrl: './video-grid-card.component.html',
   styleUrl: './video-grid-card.component.scss'
 })
-export class VideoGridCardComponent {
+export class VideoGridCardComponent implements OnChanges{
 
   constructor() {}
   @Input() cardData:videoDetails = videoDetailsInitializer
+  imgUrl:string = ``
+
+  ngOnChanges(changes: SimpleChanges): void {
+      this.imgUrl = `http://174.174.187.245:8082/api/Videos/thumbnail-src/${this.cardData.thumbnail}`
+      console.log(this.imgUrl)
+  }
 }
