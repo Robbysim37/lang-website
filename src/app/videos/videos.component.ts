@@ -1,45 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
-
-interface videoDetails {
-  description: string
-  file_name: string
-  id: number
-  location: string
-  thumbnail: string
-  title: string
-  year: number
-}
+import { VideosService,videoObj } from '../services/videos.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
-  styleUrl: './videos.component.scss'
+  styleUrl: './videos.component.scss',
+  providers: [VideosService]
 })
 
 export class VideosComponent implements OnInit {
 
-  constructor(private http:HttpClient){}
+  private videosSubscription: Subscription = new Subscription();
 
-  videoDetailsArr:videoDetails[] = []
+  constructor(private videosService: VideosService){}
 
-  private getVideos = () => {
-    this.http.get<videoDetails[]>("http://174.174.187.245:8082/api/Videos")
-    .pipe(map(responseData => {
-      const videoArr:videoDetails[] = []
-      console.log(responseData)
-      responseData.forEach(detailObj => {
-        videoArr.push(detailObj)
-      })
-      return videoArr
-    }))
-    .subscribe(videoArr => {
-      this.videoDetailsArr = videoArr
-    })
-  }
+  videoDetailsArr:videoObj[] = []
 
   ngOnInit(): void {
-      this.getVideos()
+    this.videosService.getBackendVideos()
+    this.videosSubscription = this.videosService.videos$.subscribe(value => {
+      this.videoDetailsArr = value;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.videosSubscription.unsubscribe();
   }
 }
