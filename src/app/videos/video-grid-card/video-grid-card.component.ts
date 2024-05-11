@@ -1,24 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { videoObj,videoObjInitializer } from '../../services/videos.service';
 
-interface videoDetails {
-  description: string
-  file_name: string
-  id: number
-  location: string
-  thumbnail: string
-  title: string
-  year: number
-}
 
-let videoDetailsInitializer = {
-  description: "",
-  file_name: "",
-  id: 0,
-  location: "",
-  thumbnail: "",
-  title: "",
-  year: 0
-}
 
 @Component({
   selector: 'app-video-grid-card',
@@ -28,7 +11,7 @@ let videoDetailsInitializer = {
 export class VideoGridCardComponent implements OnChanges{
 
   constructor() {}
-  @Input() cardData:videoDetails = videoDetailsInitializer
+  @Input() cardData:videoObj = videoObjInitializer
   imgUrl:string = ``
 
   ngOnChanges(changes: SimpleChanges): void {

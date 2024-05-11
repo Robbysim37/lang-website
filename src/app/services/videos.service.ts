@@ -3,10 +3,20 @@ import { map } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+export const videoObjInitializer = {
+    description: "",
+    file_name: "",
+    id: "",
+    location: "",
+    thumbnail: "",
+    title: "",
+    year: 0
+  }
+
 export interface videoObj {
     description: string
     file_name: string
-    id: number
+    id: string
     location: string
     thumbnail: string
     title: string
@@ -32,6 +42,12 @@ export class VideosService{
         this._videos = newValue;
         this.videosSubject.next(newValue);
       }
+
+    getSingleVideo(incomingID:string){
+        return this._videos.filter(currVideo => {
+            return currVideo.id === incomingID ? true : false
+        })[0]
+    }
 
     getBackendVideos = () => {
         this.http.get<videoObj[]>("http://174.174.187.245:8082/api/Videos")

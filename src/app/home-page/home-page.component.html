@@ -1,9 +1,9 @@
 <mat-toolbar color="primary" class="navbar mat-toolbar">
-    <div class="navCard highlight">Videos</div>
-    <div class="navCard highlight">Photos</div>
-<div class="navCard">Lang Documented</div>
-    <div class="navCard highlight">People</div>
-    <div class="navCard highlight">Contact</div>
+    <div class="navCard highlight" routerLink="/videos">Videos</div>
+    <div class="navCard highlight" routerLink="/photos">Photos</div>
+<div class="navCard" routerLink="/">Lang Documented</div>
+    <div class="navCard highlight" routerLink="/people">People</div>
+    <div class="navCard highlight" routerLink="/contact">Contact</div>
 </mat-toolbar>
 
 <!-- Fake Toolbar that will push main content down so that the real
@@ -12,3 +12,4 @@ toolbar never covers anything -->
 <mat-toolbar/>
 
 <router-outlet></router-outlet>
+<app-video-details/>
