@@ -1,4 +1,4 @@
-<mat-card class="video-card">
+<mat-card class="video-card" (click)="onCardClick()">
     <img class="thumbnail" mat-card-image [src]=imgUrl/>
     <mat-card-content class="video-card-content">
         <p class="title">{{cardData.title}}</p>

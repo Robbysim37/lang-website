@@ -16,7 +16,6 @@ import { PersonGridCardComponent } from './people/person-grid-card/person-grid-c
 import { PhotoModalComponent } from './photos/photo-modal/photo-modal.component';
 import { FullPageGridComponent } from './main-content/full-page-grid/full-page-grid.component';
 import { VideoDetailsComponent } from './videos/video-details/video-details.component';
-import { VideosService } from './services/videos.service';
 
 const appRoutes:Routes = [
   {path: "videos",component:VideosComponent},
@@ -46,8 +45,7 @@ const appRoutes:Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    provideAnimationsAsync(),
-    VideosService
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
