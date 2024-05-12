@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-video-details',
   templateUrl: './video-details.component.html',
-  styleUrl: './video-details.component.css'
+  styleUrl: './video-details.component.scss'
 })
 export class VideoDetailsComponent implements OnInit{
 

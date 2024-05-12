@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+
+.video-player-and-details-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-player-container{
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    background-color: map-get($custom-primary-palette, 500);
+    width: fit-content;
+}
+
+.video-details-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.family-video-player{
+    height: 80vh;
+}
+
+.title-container{
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-date-container{
+    width: 20%;
+    background-color: orange;
+}

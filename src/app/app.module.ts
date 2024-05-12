@@ -15,7 +15,7 @@ import { PeopleComponent } from './people/people.component';
 import { PersonGridCardComponent } from './people/person-grid-card/person-grid-card.component';
 import { PhotoModalComponent } from './photos/photo-modal/photo-modal.component';
 import { FullPageGridComponent } from './main-content/full-page-grid/full-page-grid.component';
-import { VideoDetailsComponent } from './videos/video-details/video-details.component';
+import { VideoDetailsComponent } from './main-content/video-details/video-details.component';
 
 const appRoutes:Routes = [
   {path: "videos",component:VideosComponent},
