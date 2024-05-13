@@ -1,0 +1,30 @@
+<div class="main-and-sidebar">
+  <div class="video-player-and-details-container">
+    <mat-card class="video-player-container">
+      
+        <video class="family-video-player" *ngIf="dataFound" autoplay controls>
+          <source [src]="videoUrl" type="video/mp4">
+        </video>
+
+      <mat-card-content class="video-details-container">
+
+        <div class="title-container">
+          <p class="title text">{{videoObj.title}}</p>
+          <div class="location-date-container">
+            <p class="year text">{{videoObj.year}}</p>
+            <p class="location text">{{videoObj.location}}</p>
+          </div>
+        </div>
+
+        <div class="description-container">
+          <p class="description text">{{videoObj.description}}</p>
+        </div>
+
+      </mat-card-content>
+
+    </mat-card>
+
+    <app-side-panel></app-side-panel>
+
+  </div>
+</div>

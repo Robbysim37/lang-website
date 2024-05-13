@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VideosService, videoObj, videoObjInitializer } from '../../services/videos.service';
 import { Subscription } from 'rxjs';
@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-video-details',
   templateUrl: './video-details.component.html',
-  styleUrl: './video-details.component.css'
+  styleUrl: './video-details.component.scss'
 })
 export class VideoDetailsComponent implements OnInit{
 

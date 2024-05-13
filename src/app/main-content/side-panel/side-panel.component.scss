@@ -1,0 +1,18 @@
+@import "../../../styles.scss";
+
+.side-panel-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($custom-primary-palette, 900);
+    border-radius: 1em;
+    padding: 1em;
+    width: fit-content;
+}
+
+::ng-deep .mat-mdc-tab-group[_ngcontent-ng-c3715773518]{
+    --mat-tab-header-inactive-label-text-color: white!important;
+    --mat-tab-header-inactive-hover-label-text-color: lightblue!important;
+}
+
