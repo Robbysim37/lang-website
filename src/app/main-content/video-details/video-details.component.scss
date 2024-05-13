@@ -1,10 +1,18 @@
 @import "../../../styles.scss";
 
+.main-and-sidebar{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
 .video-player-and-details-container{
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
 .video-player-container{
@@ -13,8 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
-    background-color: map-get($custom-primary-palette, 500);
+    background-color: map-get($custom-primary-palette, 900);
     width: fit-content;
 }
 
@@ -25,18 +32,29 @@
 }
 
 .family-video-player{
-    height: 80vh;
+    height: 70vh;
 }
 
 .title-container{
     width: 100%;
-    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .location-date-container{
-    width: 20%;
-    background-color: orange;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title{
+    font-size: 1.5em;
 }
