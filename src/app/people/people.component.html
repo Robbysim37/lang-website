@@ -1,11 +1,3 @@
 <app-full-page-grid>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
-    <app-person-grid-card></app-person-grid-card>
+    <app-person-grid-card *ngFor="let card of peopleArr" [cardData]="card"/>
 </app-full-page-grid>

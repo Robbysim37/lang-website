@@ -32,7 +32,7 @@ export class VideosService{
     constructor(private http:HttpClient){}
 
     private _videos:videoObj[] = [];
-    private _videosLoaded:boolean = false
+    private _videosLoaded: boolean = false
     private videosSubject: BehaviorSubject<videoObj[]> = new BehaviorSubject<videoObj[]>(this._videos);
     private videosLoadedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this._videosLoaded);
 
@@ -61,7 +61,6 @@ export class VideosService{
     }
 
     getBackendVideos = () => {
-        console.log("data get")
         this.http.get<videoObj[]>("http://174.174.187.245:8082/api/Videos")
         .pipe(map(responseData => {
             const videoArr:videoObj[] = []
@@ -71,7 +70,6 @@ export class VideosService{
             return videoArr
         }))
         .subscribe(videoArr => {
-            console.log("GET finishes")
             this.updateVideos(videoArr)
             this.updateVideosLoaded(true)
         })

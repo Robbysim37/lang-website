@@ -1,9 +1,9 @@
 <mat-card class="person-card">
     <div class="avatar-container">
-        <img class="avatar" mat-card-avatar src="assets/bird.jpg"/>
+        <img class="avatar" mat-card-avatar [src]="imgUrl"/>
     </div>
     <div class="text-group">
-        <p class="name">Jeff Lang</p>
-        <p class="birthdate">mm/dd/yyyy</p>
+        <p class="name">{{cardData.first_name + " " + cardData.last_name}}</p>
+        <p class="birthdate">{{cardData.date_of_birth}}</p>
     </div>
 </mat-card>
